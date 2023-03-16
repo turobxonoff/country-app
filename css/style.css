@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@100;200;300;400;500;600;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font-color: hsl(0, 0%, 99%);
+    --bg-color: #24241e;
+}
+
+body.active {
+    --font-color: hsl(200, 15%, 8%);
+    --bg-color: hsl(0, 0%, 99%);
+}
+ 
+html {
+    font-size: 63%;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--font-color);
+}
+
+.container:nth-child(1) {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+}
+
+button {
+    outline: none; border: 1px solid var(--font-color);
+    background: var(--bg-color);
+    color: var(--font-color);
+    padding: 0.4rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+
+}
+
+.dark-mode {
+    background-color: var(--font-color);
+    color: var(--bg-color);
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    padding: 1rem 2rem;
+    border-radius: 0.3rem;
+}
+
+.controls i {
+    padding-right: 0.5rem;
+}
+
+.controls input {
+    outline: none; border:  none;
+    width: 15rem;
+    background: none;
+    color: var(--font-color);
+}
+
+.dropdownMenu {
+    width: 15rem;
+}
+
+.dropdown {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    padding: 1rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+
+.dropdown p {
+    font-size: 1.5rem;
+}
+
+.drop-options {
+    display: none;
+    position: absolute;
+    width: 15rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    background: var(--bg-color);
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+
+.drop-options p {
+    font-size: 1.5rem;
+    padding: 0.5rem 0;
+}
+
+.show-options {
+    display: block;
+}
+
+.countries {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    padding: 2rem 9%;
+    gap: 0.5rem;
+}
+
+.country {
+    width: 25rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+    border-radius: 0.5rem;
+    padding: 2rem;
+}
+
+.country img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.country h3 {
+    font-size: 1.8rem;
+    padding-top: 1rem;
+}
+
+.country p {
+    padding: 1rem 0 0;
+    font-size: 1.3rem;
+}
+
+.country p span {
+    font-weight: bold;
+}
+
+
+@media (max-width: 990px) {
+    html {
+        font-size: 57%;
+    }
+    .country h3 {
+        font-size: 2rem;
+    }
+    .country p {
+        font-size: 1.5rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+    html {
+        font-size: 55%;
+    }
+    .country {
+        width: 100%;
+    }
+    .country h3 {
+        font-size: 2rem;
+    }
+    .country p {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 450px) {
+    h1 {
+        font-size: 2rem;
+    }
+    html {
+        font-size: 50%;
+    }
+    .controls {
+        padding: 0.5rem 1rem;
+    }
+    .controls input {
+        width: 15rem;
+    }
+    .dropdown {
+        padding: 0.65rem 1rem;
+        margin-left: 2rem;
+        font-size: 1.2rem;
+    }
+    .dropdown p {
+        font-size: 1.3rem;
+    }
+    .country {
+        width: 100%;
+        margin-top: 2rem;
+    }
+    .country h3 {
+        font-size: 2rem;
+    }
+    .country p {
+        font-size: 1.5rem;
+    }
+}
